@@ -36,3 +36,14 @@ document.addEventListener("keydown", function (e) {
     closeModal();
   }
 });
+
+//////// Button scrolling
+btnScrollTo.addEventListener("click", function (e) {
+  const s1coords = section1.getBoundingClientRect();
+  console.log(s1coords);
+
+  console.log(e.target.getBoundingClientRect());
+
+  // Scrolling
+  section1.scrollIntoView({ behavior: "smooth" });
+});
